@@ -79,14 +79,14 @@ module.exports = () => {
         },
       ]
     },
-    async rewrites() {
-      return [
-        {
-          source: '/blog/:path*/',
-          destination: 'https://blog.weibozhang.com/:path*/'
-        }
-      ]
-    },
+    // async rewrites() {
+    //   return [
+    //     {
+    //       source: '/blog/:path*/',
+    //       destination: 'https://blog.weibozhang.com/:path*/'
+    //     }
+    //   ]
+    // },
     webpack: (config, options) => {
       config.module.rules.push({
         test: /\.svg$/,
