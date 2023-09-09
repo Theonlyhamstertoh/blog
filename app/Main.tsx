@@ -21,6 +21,7 @@ export default function Home({ posts }) {
             </p>
           </div>
           <Image
+            priority={true}
             src="/static/images/avatar.png"
             className="rounded-full w-20 h-20 md:w-48 md:h-48"
             alt="Avatar"
