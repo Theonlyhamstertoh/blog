@@ -3,7 +3,8 @@ const siteMetadata = {
   title: 'Journey at 18',
   author: 'Weibo Zhang',
   headerTitle: 'Weibo Zhang',
-  description: 'Blogs from a lost college student. Figuring things out along the way.',
+  description:
+    "I'm a current college student exploring, experimenting, and finding my path in life. Writing is my form of making sense of my thoughts and be a little silly in my writings. Feel free to leave a comment or contact me!",
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://weibozhang.com',
@@ -30,7 +31,7 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
     // Please add your .env file and modify it according to your selection
-    provider: 'buttondown',
+    provider: 'emailoctopus',
   },
   comments: {
     // If you want to use an analytics provider you have to add it to the
