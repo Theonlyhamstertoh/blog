@@ -19,6 +19,12 @@ export default function Home({ posts }) {
             <p className="text-lg leading-7 text-gray-500 dark:text-gray-400 max-w-xl">
               {siteMetadata.description}
             </p>
+            <Link
+              href="/blog/now"
+              className="leading-14 shadow-sm font-medium border-gray-300 dark:border-gray-700 border p-3 mt-3 rounded-md text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+            >
+              What I'm doing now
+            </Link>
           </div>
           <Image
             priority={true}
