@@ -11,7 +11,7 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="flex flex-col-reverse md:flex-row pb-8 pt-6 justify-between">
+        <div className="flex gap-4 flex-col-reverse md:flex-row pb-8 pt-6 justify-between">
           <div className="space-y-2 md:space-y-5">
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
               Hi, I'm Weibo : )
@@ -22,10 +22,10 @@ export default function Home({ posts }) {
           </div>
           <Image
             src="/static/images/avatar.png"
-            className="flex-none rounded-full"
+            className="rounded-full w-20 h-20 md:w-48 md:h-48"
             alt="Avatar"
-            width="250"
-            height="250"
+            width="350"
+            height="350"
           />
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -92,7 +92,7 @@ export default function Home({ posts }) {
         </div>
       )}
       {siteMetadata.newsletter?.provider && (
-        <div className="flex items-center justify-center pt-4">
+        <div className="flex items-center justify-center pt-6 border-t border-t-gray-200 dark:border-t-gray-700 ">
           <NewsletterForm />
         </div>
       )}
