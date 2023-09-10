@@ -77,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
-          <VercelAnalytics mode="production" />
+          <VercelAnalytics />
           <GoogleAnalytics />
           <SectionContainer>
             <div className="flex h-screen flex-col justify-between font-sans">
@@ -98,10 +98,12 @@ const GoogleAnalytics = () => {
   return (
     <>
       <Script
+        id="google-analytics-script"
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
       ></Script>
       <Script
+        id="google-analytics"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `window.dataLayer = window.dataLayer || [];
