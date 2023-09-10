@@ -16,14 +16,15 @@ export default function Home({ posts }) {
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
               Hi, I'm Weibo : )
             </h1>
-            <p className="text-lg leading-7 text-gray-500 dark:text-gray-400 max-w-xl">
+            <p className="text-lg leading-7 pb-4 text-gray-500 dark:text-gray-400 max-w-xl">
               {siteMetadata.description}
             </p>
+
             <Link
               href="/blog/now"
-              className="leading-14 shadow-sm font-medium border-gray-300 dark:border-gray-700 border p-3 mt-3 rounded-md text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+              className=" leading-14 shadow-lg shadow-primary-50 dark:shadow-primary-900 font-medium border-primary-400 dark:border-primary-600 border px-3 py-3 rounded-md text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
             >
-              What I'm doing now
+              See What I'm doing now
             </Link>
           </div>
           <Image

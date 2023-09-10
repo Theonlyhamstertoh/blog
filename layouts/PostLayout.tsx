@@ -30,7 +30,7 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
-  const { filePath, path, slug, date, title, tags } = content
+  const { filePath, path, slug, date, readingTime, lastmod, title, tags } = content
   const basePath = path.split('/')[0]
 
   return (
@@ -43,15 +43,33 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <dl className="space-y-10">
                 <div>
                   <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                  <dd className="text-lg font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
                       {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                     </time>
                   </dd>
                 </div>
               </dl>
+              {lastmod && (
+                <div className="">
+                  <dt className="sr-only">Last Updated</dt>
+                  <dd className="text-sm mb-2 font-medium leading-6 text-gray-400 dark:text-gray-400">
+                    <time dateTime={lastmod}>
+                      Updated{' '}
+                      {new Date(lastmod).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+                    </time>
+                  </dd>
+                </div>
+              )}
+
               <div>
                 <PageTitle>{title}</PageTitle>
+              </div>
+              <div className="">
+                <dt className="sr-only">Reading Time</dt>
+                <dd className="text-sm mb-2 font-medium leading-6 text-gray-400 dark:text-gray-400">
+                  {readingTime.text}
+                </dd>
               </div>
             </div>
           </header>
