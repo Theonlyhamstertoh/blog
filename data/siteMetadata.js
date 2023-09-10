@@ -24,7 +24,7 @@ const siteMetadata = {
     // content security policy in the `next.config.js` file.
     // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
     googleAnalytics: {
-      googleAnalyticsId: process.env.NEXT_GOOGLE_ANALYTICS_ID,
+      googleAnalyticsId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID,
     },
   },
   newsletter: {
