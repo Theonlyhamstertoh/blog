@@ -21,6 +21,10 @@ module.exports = {
         13: '3.25rem',
         14: '3.5rem',
       },
+      animation: {
+        'bounce-slow': 'bounce 3s linear infinite',
+        'bounce-smooth': 'hovering 2s linear infinite',
+      },
       fontFamily: {
         sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
       },

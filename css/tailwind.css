@@ -29,3 +29,20 @@ input:-webkit-autofill:focus {
     background-color 600000s 0s,
     color 600000s 0s;
 }
+
+@layer components {
+  @keyframes hovering {
+    0%,
+    100% {
+      transform: translateY(-3%);
+      animation-timing-function: cubic-bezier(0.3, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+    }
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

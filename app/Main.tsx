@@ -4,6 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 import Image from '@/components/Image'
+import StyledButton from '@/components/Button'
 
 const MAX_DISPLAY = 10
 
@@ -20,12 +21,7 @@ export default function Home({ posts }) {
               {siteMetadata.description}
             </p>
 
-            <Link
-              href="/blog/now"
-              className=" leading-14 shadow-lg shadow-primary-50 dark:shadow-primary-900 font-medium border-primary-400 dark:border-primary-600 border px-3 py-3 rounded-md text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            >
-              See What I'm doing now
-            </Link>
+            <StyledButton label="See what I'm doing now" href="blog/now" />
           </div>
           <Image
             priority={true}
