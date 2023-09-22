@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Journey at 18',
+  title: 'Weibo Zhang',
   author: 'Weibo Zhang',
   headerTitle: 'Weibo Zhang',
   description:

@@ -15,7 +15,7 @@ export default function Home({ posts }) {
         <div className="flex gap-4 flex-col-reverse md:flex-row pb-8 pt-6 justify-between">
           <div className="space-y-2 md:space-y-5">
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-              Hi, I'm Weibo : )
+              Hi, I'm Weibo : ){' '}
             </h1>
             <p className="text-lg leading-7 pb-4 text-gray-500 dark:text-gray-400 max-w-xl">
               {siteMetadata.description}
