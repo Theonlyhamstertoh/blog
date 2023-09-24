@@ -12,6 +12,12 @@ const projectsData = [
     href: 'https://www.moonwishstudios.com/',
   },
   {
+    title: 'Musigroove ',
+    description: `Add timestamps to your dance performance song without manually scrubbing to positions`,
+    imgSrc: '/static/images/projects/musigroove.png',
+    href: 'https://musigroove.vercel.app/',
+  },
+  {
     title: 'Stacks (Web Game)',
     description: `A remake of the popular hit mobile game Stacks. Attempt to stack as many blocks as you can!`,
     imgSrc: '/static/images/projects/stacks-game.png',
