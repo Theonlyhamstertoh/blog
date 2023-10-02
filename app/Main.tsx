@@ -1,3 +1,4 @@
+'use client'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
@@ -12,7 +13,7 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="flex gap-4 flex-col-reverse md:flex-row pb-8 pt-6 justify-between">
+        <div className="flex gap-8 flex-col-reverse md:flex-row pb-8 pt-6 justify-between">
           <div className="space-y-2 md:space-y-5">
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
               Hi, I'm Weibo : ){' '}
@@ -25,9 +26,12 @@ export default function Home({ posts }) {
           </div>
           <Image
             priority={true}
-            src="/static/images/avatar.png"
-            className="rounded-full w-20 h-20 md:w-48 md:h-48"
+            src="/static/images/weibo-at-pch.jpeg"
+            className="rounded-full w-24 h-24 object-cover transition shadow-primary-50 ring-4 md:ring-8  ring-primary-400/50 dark:ring-primary-700 dark:shadow-primary-900  hover:scale-100   md:w-44 md:h-44"
             alt="Avatar"
+            onLoadingComplete={(img) => {
+              img.classList.add('scale-110', 'ring', 'shadow-lg')
+            }}
             width="350"
             height="350"
           />
@@ -95,8 +99,9 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
+
       {siteMetadata.newsletter?.provider && (
-        <div className="flex items-center justify-center pt-6 border-t border-t-gray-200 dark:border-t-gray-700 ">
+        <div className="flex items-center justify-center pt-6 border-t  border-t-gray-200 dark:border-t-gray-700 ">
           <NewsletterForm />
         </div>
       )}
