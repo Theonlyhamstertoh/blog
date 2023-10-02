@@ -27,7 +27,7 @@ export default function Home({ posts }) {
           <Image
             priority={true}
             src="/static/images/weibo-at-pch.jpeg"
-            className="rounded-full w-24 h-24 object-cover transition shadow-primary-50 ring-4 md:ring-8  ring-primary-400/50 dark:ring-primary-700 dark:shadow-primary-900  hover:scale-100   md:w-44 md:h-44"
+            className="rounded-full w-24 h-24 object-cover transition shadow-primary-50 ring-4 md:ring-8  ring-primary-400/50 dark:ring-primary-100 dark:shadow-primary-900  hover:scale-100   md:w-44 md:h-44"
             alt="Avatar"
             onLoadingComplete={(img) => {
               img.classList.add('scale-110', 'ring', 'shadow-lg')
