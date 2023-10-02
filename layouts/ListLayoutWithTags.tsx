@@ -75,6 +75,12 @@ export default function ListLayoutWithTags({
 
   const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
 
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'America/Los_Angeles',
+  }
   return (
     <>
       <div>
@@ -123,13 +129,17 @@ export default function ListLayoutWithTags({
             <ul>
               {displayPosts.map((post) => {
                 const { path, date, title, summary, tags } = post
+                const datePlusDay = new Date(date)
+                datePlusDay.setHours(datePlusDay.getHours() + 24)
                 return (
                   <li key={path} className="py-5">
                     <article className="space-y-2 flex flex-col xl:space-y-0">
                       <dl>
                         <dt className="sr-only">Published on</dt>
                         <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                          <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                          <time dateTime={date}>
+                            {datePlusDay.toLocaleDateString(siteMetadata.locale, options)}
+                          </time>
                         </dd>
                       </dl>
                       <div className="space-y-3">
