@@ -9,6 +9,12 @@ import StyledButton from '@/components/Button'
 
 const MAX_DISPLAY = 10
 
+const options: Intl.DateTimeFormatOptions = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}
+
 export default function Home({ posts }) {
   return (
     <>
@@ -47,7 +53,9 @@ export default function Home({ posts }) {
                     <dl>
                       <dt className="sr-only">Published on</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                        <time dateTime={date}>
+                          {new Date(date).toLocaleDateString(siteMetadata.locale, options)}
+                        </time>
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
