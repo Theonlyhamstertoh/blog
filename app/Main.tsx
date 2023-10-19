@@ -7,6 +7,7 @@ import NewsletterForm from 'pliny/ui/NewsletterForm'
 import Image from '@/components/Image'
 import StyledButton from '@/components/Button'
 import sitemap from './sitemap'
+import { Deck } from '@/components/Deck'
 
 const MAX_DISPLAY = 10
 

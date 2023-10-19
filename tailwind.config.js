@@ -15,6 +15,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      cursor: {
+        fancy: 'url(/static/images/cursor.png), default',
+      },
       lineHeight: {
         11: '2.75rem',
         12: '3rem',

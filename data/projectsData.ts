@@ -12,6 +12,12 @@ const projectsData = [
     href: 'https://www.moonwishstudios.com/',
   },
   {
+    title: 'SRWC Go App',
+    description: `Reverse-engineers the CSULB SRWC App to allow you to generate barcode entry codes into the gym and view schedule without the bugginess of the app`,
+    imgSrc: '/static/images/projects/srwc-go.png',
+    href: 'https://srwc.vercel.app/',
+  },
+  {
     title: 'Musigroove ',
     description: `Add timestamps to your dance performance song without manually scrubbing to positions`,
     imgSrc: '/static/images/projects/musigroove.png',
