@@ -20,7 +20,7 @@ const Header = () => {
               <Image
                 priority={true}
                 src="/static/images/weibo.png"
-                className="w-24 sm:w-fit object-contain h-10 sm:h-20 sm:object-cover transition opacity-0 scale-0"
+                className="w-24 duration-700 sm:w-fit object-contain h-10 sm:h-20 sm:object-cover transition opacity-0 scale-0"
                 onLoadingComplete={(img) => {
                   img.classList.add('scale-110', 'opacity-100')
                 }}

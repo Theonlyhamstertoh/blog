@@ -10,14 +10,12 @@ module.exports = {
     './pages/**/*.{js,ts,tsx}',
     './components/**/*.{js,ts,tsx}',
     './layouts/**/*.{js,ts,tsx}',
+    './types/**/*.{js,ts,tsx}',
     './data/**/*.mdx',
   ],
   darkMode: 'class',
   theme: {
     extend: {
-      cursor: {
-        fancy: 'url(/static/images/cursor.png), default',
-      },
       lineHeight: {
         11: '2.75rem',
         12: '3rem',

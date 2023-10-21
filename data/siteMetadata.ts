@@ -1,5 +1,7 @@
-/** @type {import("pliny/config").PlinyConfig } */
-const siteMetadata = {
+import type { CustomSiteMetadata } from 'types/types'
+
+import type { PlinyConfig } from 'pliny/config'
+const siteMetadata: PlinyConfig & CustomSiteMetadata = {
   title: 'Weibo Zhang',
   author: 'Weibo Zhang',
   headerTitle: 'Weibo Zhang',
@@ -17,6 +19,7 @@ const siteMetadata = {
   // twitter: 'https://twitter.com/Twitter',
   // facebook: 'https://facebook.com',
   // youtube: 'https://youtube.com',
+  image: '/static/images/avatar.png',
   linkedin: 'https://www.linkedin.com/in/weibozhang/',
   locale: 'en-US',
   analytics: {
@@ -24,7 +27,7 @@ const siteMetadata = {
     // content security policy in the `next.config.js` file.
     // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
     googleAnalytics: {
-      googleAnalyticsId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID,
+      googleAnalyticsId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID!,
     },
   },
   newsletter: {
@@ -41,10 +44,10 @@ const siteMetadata = {
     giscusConfig: {
       // Visit the link below, and follow the steps in the 'configuration' section
       // https://giscus.app/
-      repo: process.env.NEXT_PUBLIC_GISCUS_REPO,
-      repositoryId: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
-      category: process.env.NEXT_PUBLIC_GISCUS_CATEGORY,
-      categoryId: process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID,
+      repo: process.env.NEXT_PUBLIC_GISCUS_REPO!,
+      repositoryId: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID!,
+      category: process.env.NEXT_PUBLIC_GISCUS_CATEGORY!,
+      categoryId: process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID!,
       mapping: 'pathname', // supported options: pathname, url, title
       reactions: '1', // Emoji reactions: 1 = enable / 0 = disable
       // Send discussion metadata periodically to the parent window: 1 = enable / 0 = disable
@@ -70,4 +73,5 @@ const siteMetadata = {
   },
 }
 
-module.exports = siteMetadata
+export default siteMetadata
+// module.exports = siteMetadata

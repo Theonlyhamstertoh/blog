@@ -7,7 +7,7 @@ import NewsletterForm from 'pliny/ui/NewsletterForm'
 import Image from '@/components/Image'
 import StyledButton from '@/components/Button'
 import sitemap from './sitemap'
-import { Deck } from '@/components/Deck'
+import React from 'react'
 
 const MAX_DISPLAY = 10
 
@@ -33,13 +33,14 @@ export default function Home({ posts }) {
 
             <StyledButton label="See what I'm doing now" href="blog/now" />
           </div>
+
           <Image
             priority={true}
-            src="/static/images/weibo-at-pch.jpeg"
-            className="rounded-full w-24 h-24 object-cover transition shadow-primary-50 ring-4 md:ring-8  ring-primary-400/50 dark:ring-primary-100 dark:shadow-primary-900  hover:scale-100   md:w-44 md:h-44"
+            src={siteMetadata.image}
+            className="rounded-full w-24 h-24 object-cover transition shadow-primary-100 ring-2 md:ring-8  ring-primary-400/20 dark:ring-primary-100 dark:shadow-primary-900  hover:scale-100 shadow-2xl  duration-500 delay-100 md:w-48 md:h-48"
             alt="Avatar"
             onLoadingComplete={(img) => {
-              img.classList.add('scale-110', 'ring', 'shadow-lg')
+              img.classList.add('scale-110', 'ring', 'shadow')
             }}
             width="350"
             height="350"
